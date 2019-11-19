@@ -1,0 +1,57 @@
+.wrapper
+  .header
+    .header-top
+      %h1.title
+        = link_to "ShootingSpotShare", class:"main-title"
+        %span.title-sub 撮影スポット共有しよう。
+    .header-bottom
+      %ul.menu
+        %li 
+          = link_to "投稿する"
+      %input.search{name: "search", placeholder: "キーワードを入力", type: "search"}/
+      %button.search-btn{title: '検索', type: 'submit'}
+      %ul.login-menu
+        %li.login-menu-btn-left
+          = link_to "ログイン"
+        %li.login-menu-btn-right 
+          = link_to "新規登録"
+  .top-page
+    .main-photo
+      最新写真
+
+  .top-photos
+    %h2 PHOTOS
+    %ul.top-photos-nav
+      %li.trend
+        トレンド
+      %li.select
+        セレクト
+      %li.new
+        新着
+
+  .photos-holder
+    %ul.photo-holder
+      %li.image
+        歴代写真1  
+      %li.image
+        歴代写真2  
+      %li.image
+        歴代写真3
+      %li.image
+        歴代写真1  
+      %li.image
+        歴代写真2  
+      %li.image
+        歴代写真3
+      %li.image
+        歴代写真1  
+      %li.image
+        歴代写真2  
+      %li.image
+        歴代写真3
+      %li.image
+        歴代写真1  
+      %li.image
+        歴代写真2  
+      %li.image
+        歴代写真3
