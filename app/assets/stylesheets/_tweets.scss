@@ -1,7 +1,7 @@
 .wrapper{
   // display: flex;
   .header{
-    z-index: 0;
+    z-index: 1;
     position: fixed;
     width: 100%;
     top: 0;
@@ -119,6 +119,7 @@
     height: 100%;
     
     background-color: rgb(236, 236, 185);
+    z-index: 0.9;
     .photo-holder{
       // display: flex;
       display: grid;
@@ -128,6 +129,7 @@
         // display: grid;
         // grid-template-columns: repeat(3, 1fr);
         // display: inline-block;
+        position: relative;
         background-color: rgb(64, 66, 175);
         border: solid 1px; 
         padding:  10px;   
@@ -135,7 +137,21 @@
         height: 300px;
         margin: 0 auto;
         margin-top: 20px;
-        
+        &-title{
+          color: coral;
+          font-size: 22px;
+          font-weight: bold;
+          text-align: center;
+        }
+        &-name{
+          color: rgb(237, 239, 241);
+          font-size: 13px;
+          text-align: right;
+          position: absolute;
+          bottom: 3px;
+          right: 10px;
+
+        }
             
 
       }
