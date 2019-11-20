@@ -1,10 +1,45 @@
 
 @import "./reset";
 @import "tweets";
-
+@import "new";
 @import "font-awesome-sprockets";
 @import "./font-awesome";
 
+
+.header{
+  z-index: 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  .header-top{
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    
+    .title{
+      font-family: 'Times New Roman', serif;
+      font-size: 28px;
+      padding: 10px 20px;
+      display: inline-flex;
+      
+     
+      .main-title{
+        display: block;
+        text-decoration: none;
+        color: rgb(67, 67, 241);       
+      }
+      .title-sub{
+        font-size: 10px;
+        color: black;
+        padding-top: 25px;
+        padding-left: 10px;
+        
+
+      }
+      
+    }
+  }
+}
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
