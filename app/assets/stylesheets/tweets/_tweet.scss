@@ -13,21 +13,16 @@
         font-family: 'Times New Roman', serif;
         font-size: 28px;
         padding: 10px 20px;
-        
-       
+        display: flex;
         .main-title{
           display: block;
           text-decoration: none;
           color: rgb(67, 67, 241);
-         
-          
-          
         }
         .title-sub{
           font-size: 10px;
           color: black;
-          left: 10px;
-
+          margin: 25px 0 0 5px;
         }
       }
     }

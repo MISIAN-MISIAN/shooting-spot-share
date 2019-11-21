@@ -1,9 +1,13 @@
-.form
-  = form_for @tweet do |f|
-    = f.text_field :text, class: 'form__message', placeholder: 'タイトル'
-    = f.text_field :name, class: 'form__name', placeholder: 'ニックネーム'
-    .form__mask
-      = f.label :image, class: 'form__mask__image' do
-        -# = fa_icon 'image', class: 'icon'
-        = f.file_field :image, class: 'hidden'
-    = f.submit 'Send', class: 'form__submit'
+.wrapper
+  .header
+    = render partial: 'header-top'
+
+  .form
+    = form_for @tweet do |f|
+      = f.text_field :text, class: 'form__message', placeholder: 'タイトル'
+      = f.text_field :name, class: 'form__name', placeholder: 'ニックネーム'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          -# = fa_icon 'image', class: 'icon'
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
