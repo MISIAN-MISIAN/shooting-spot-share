@@ -7,7 +7,7 @@
   .login-menu
   - if user_signed_in?
     .login-menu-btn-left
-      = link_to "ログアウト",destroy_user_session_path, method: :delete
+      = link_to "ログアウト",destroy_user_session_path, method: :delete,class: "post"
       = link_to "投稿する", '/tweets/new', class: "post"
   - else     
     .login-menu-btn-left
