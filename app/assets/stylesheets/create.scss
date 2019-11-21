@@ -1,0 +1,25 @@
+  
+ .contents{
+   width: 100%;
+   height: 100%;
+  .success {
+    // box-shadow: 0 0 10px rgba(7, 1, 1);
+    background-color: rgb(241, 233, 233);
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 90px;
+    h3 {
+      font-size: 15px;
+    }
+    .create-btn {
+      padding: 8px 20px;
+      font-size: 14px;
+      border: 2px solid red;
+      color: yellowgreen;
+      font-weight: bold;
+      text-align: center;
+      border-radius: 3px;
+      display: inline-block;
+    }
+  }
+}  
