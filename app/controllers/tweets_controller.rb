@@ -3,7 +3,7 @@ class TweetsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
   def index
-    @tweets = Tweet.all
+    @tweets = Tweet.includes(:user).order("created_at DESC").page(params[:page]).per(6)
     @random = Tweet.order("RAND()").limit(1)
 
   end
@@ -31,11 +31,14 @@ class TweetsController < ApplicationController
     tweet.update(tweet_params)
   end
 
-  def show
-    
+  def show 
+    @comment = Comment.new
+    @comments = @tweet.comments.includes(:user) 
   end
 
- 
+  def search
+    @tweets = Tweet.search(params[:keyword])
+  end
   
 
   private

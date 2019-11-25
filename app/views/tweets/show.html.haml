@@ -3,5 +3,34 @@
     = render partial: 'header-top'
     = render partial: 'header-bottom'
   .top-page
+    %p.main-user-name
+      %a{href: "/users/#{@tweet.user.id}"}
+        = @tweet.user.nickname
+        さんの投稿やで
     .main-photo{style: "background-image: url(#{@tweet.image});"}
-      最新写真
+    - if user_signed_in? && current_user.id == @tweet.user_id 
+      = link_to "削除","/tweets/#{@tweet.id}", method: :delete, class: "image-delete"
+      = link_to "編集","/tweets/#{@tweet.id}/edit", method: :get, class: "image-delete"
+
+    .container
+      - if current_user
+        -# - @comment = Comment.new unless @comment
+        = form_for [@tweet,@comment] do |f|
+          = f.text_field :text, class: 'form__message', placeholder: 'コメント'
+          .form__mask
+          = f.submit 'Send', class: 'form__submit'
+
+      - else
+        %strong
+          %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+
+      .comments
+        %h4 ＜コメント一覧＞
+        - if @comments
+          - @comments.each do |comment|
+            %p
+              %strong
+                = link_to comment.user.nickname, "/users/#{comment.user_id}"
+                ：
+              = comment.text
+              

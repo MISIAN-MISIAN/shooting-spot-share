@@ -94,7 +94,8 @@
           display: inline-block;
           border-radius: 2px;
           border: solid 1px #67c5ff;
-          background-color:white
+          background-color:white;
+       
         }
         .login-menu-btn-right{
           display: inline-block;
@@ -115,6 +116,14 @@
     // background-image: url("https://i.gyazo.com/3f1e14912525af6c96a930321f743876.jpg");
     // background-size: cover;
     background-color: white;
+    .main-user-name{
+      font-size: 15px;
+      font-weight: bold;
+      padding: 20px 0 0 50px;
+      display: inline-block;
+     
+
+    }
     .main-photo{
       height: 400px;
       width: 500px;
@@ -130,6 +139,22 @@
       // margin-bottom: 30px;
       
   
+    }
+    .container {
+      
+      box-shadow: 0 0 10px rgba(rgb(0, 0, 0),0.2);
+      background-color: white;
+      box-sizing: border-box;
+    }
+    .comments {
+      padding: 5px;
+      margin-top: 15px;
+      // a {
+      //   color: red;
+      //   &:hover {
+      //     text-decoration: underline;
+      //   }
+      // }
     }
   }  
   .top-photos{
