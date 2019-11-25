@@ -3,8 +3,9 @@
     = render partial: 'header-top'
     = render partial: 'header-bottom'
   .top-page
-    .main-photo
-      最新写真
+    -@random.each do |tweet|
+      .main-photo{style: "background-image: url(#{tweet.image});"}
+        
 
   .top-photos
     %h2 PHOTOS
@@ -19,11 +20,14 @@
   .photos-holder
     %ul.photo-holder
       - @tweets.each do |tweet|
-        %li.image
-          .image-holder{style: "background-image: url(#{tweet.image});"}
+        %li.images
+          .images-holder{style: "background-image: url(#{tweet.image});"}
           -# = tweet.image
           %p.image-title
             = tweet.text  
           %p.image-name
-            = tweet.name
-        
+            = current_user.nickname
+            -# = tweet.name
+          = link_to "削除","/tweets/#{tweet.id}", method: :delete, class: "image-delete"
+          = link_to "編集","/tweets/#{tweet.id}/edit", method: :get, class: "image-delete"
+          = link_to "詳細","/tweets/#{tweet.id}", method: :get, class: "image-delete"

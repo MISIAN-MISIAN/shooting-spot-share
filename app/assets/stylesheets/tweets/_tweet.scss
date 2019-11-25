@@ -111,17 +111,22 @@
     padding-top: 80px;
     width: 100%;
     height: 100%;
-    opacity: 0.6;
-    background-image: url("https://i.gyazo.com/3f1e14912525af6c96a930321f743876.jpg");
-    background-size: cover;
+    // opacity: 0.6;
+    // background-image: url("https://i.gyazo.com/3f1e14912525af6c96a930321f743876.jpg");
+    // background-size: cover;
+    background-color: white;
     .main-photo{
       height: 400px;
       width: 500px;
       padding: 30px;
       border-radius: 3px;
       margin: 0px auto;
-      background-color: cornsilk;
+      background-color: rgb(253, 252, 252);
       margin-top: 30px;
+      background-size:contain;  
+      background-repeat: no-repeat;  
+      background-position: center;
+      border: 4mm ridge rgba(48, 37, 37, 0.6);
       // margin-bottom: 30px;
       
   
@@ -129,9 +134,11 @@
   }  
   .top-photos{
     width: 100%;
-    background-color: rgb(184, 179, 179);
+    background-color:rgb(232, 245, 48);
+    border-top: solid 2px rgb(106, 148, 240);
+    border-bottom: solid 2px rgb(106, 148, 240);
     height: 70px;
-    // margin-top: 30px;
+    margin-top: 30px;
     
     h2{
       font-size: large;
@@ -147,32 +154,40 @@
     width: 100%;
     height: 100%;
     
-    background-image: url("https://i.gyazo.com/b7c5232bb2da6e50513a565dc0e30aa9.jpg");
-    background-size: contain;
+    // background-image: url("https://i.gyazo.com/b7c5232bb2da6e50513a565dc0e30aa9.jpg");
+    // background-size: contain;
     z-index: 0.9;
     .photo-holder{
       // display: flex;
       display: grid;
       grid-template-columns: 33% 33% 33%;
-      padding: 0;
-      .image{
+      // padding: 0;
+    
+      .images{
         // display: grid;
         // grid-template-columns: repeat(3, 1fr);
         // display: inline-block;
         position: relative;
-        background-color: rgb(189, 189, 199);
+        background-color: white;
         // border: solid 1px; 
         padding:  10px;   
         width: 90%;
-        height: 300px;
+        // height: 300px;
         margin: 0 auto;
         margin-top: 40px;
         bottom: 20px;
+      
+       
         &-holder{
-          width: 95%;
+          // width: 100%;
           height: 250px;
-          background-position:center bottom;                     /* 画像の表示位置を指定 */
-          background-size:cover;      
+          border: thick double #32a1ce;
+          background-color: rgb(243, 241, 241);
+          background-size:contain;  
+          background-repeat: no-repeat;  
+          background-position: center;
+
+          // justify-content: space-evenly 
         }
         &-title{
           color: coral;
@@ -182,12 +197,12 @@
 
         }
         &-name{
-          color: rgb(237, 239, 241);
+          color: black;
           font-size: 13px;
           text-align: right;
           position: absolute;
           bottom: 3px;
-          right: 10px;
+          right: 50px;
 
         }
             
