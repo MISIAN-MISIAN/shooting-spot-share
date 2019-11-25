@@ -1,0 +1,238 @@
+.wrapper{
+  // display: flex;
+  .header{
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    .header-top{
+      height: 50px;
+      width: 100%;
+      background-color: white;
+      .title{
+        font-family: 'Times New Roman', serif;
+        font-size: 28px;
+        padding: 10px 20px;
+        display: flex;
+        .main-title{
+          display: block;
+          text-decoration: none;
+          color: rgb(67, 67, 241);
+        }
+        .title-sub{
+          font-size: 10px;
+          color: black;
+          margin: 25px 0 0 5px;
+        }
+      }
+    }
+    .header-bottom{
+      display: flex;
+      background-color: rgb(97, 88, 88);
+      height: 35px;
+      justify-content: flex-end;
+      .post{
+        color: rgb(87, 78, 78);/*文字・アイコン色*/
+        font-weight: bold;
+        border-radius: 10px;/*角丸に*/
+        position: relative;
+        display: inline-block;
+        height: 35px;/*高さ*/
+        width: 190px;/*幅*/
+        text-align: center;/*中身を中央寄せ*/
+        font-size: 15px;/*文字のサイズ*/
+        line-height: 35px;/*高さと合わせる*/
+        background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;/*グラデーション①*/
+        overflow: hidden;/*はみ出た部分を隠す*/
+        text-decoration:none;/*下線は消す*/
+        margin-left: 20px;
+      }
+      .post:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;/*全体を覆う*/
+        height: 100%;/*全体を覆う*/
+        background: linear-gradient(15deg, #ffdb2c, rgb(249, 118, 76) 25%, rgba(255, 77, 64, 0) 50%) no-repeat;
+      }
+      .post:hover{
+        background: #ecebaf;
+      }
+      // .menu{
+      //   display: inline-block;
+      //   text-decoration: none;
+      //   background: #668ad8;
+      //   color: #FFF;
+      //   border-radius: 4px;
+      //   box-shadow: 0px 0px 0px 1px #668ad8;
+      //   border: dashed 1px #FFF;
+        
+      // }
+      // .search{
+      //   text-align: center;
+      //   margin-left: 100px;
+      // }
+      // .search-btn{
+      //   background-color: #38AEF0;
+      //   border: none;
+      //   color: white;
+      //   font-size: 16px;
+      //   height: 20px;
+      //   margin-left: 1px;
+      //   margin-right: 100px;
+      //   padding: 0px 30px;
+
+      // }
+
+
+      
+
+      .login-menu{
+        display: flex;
+        .login-menu-btn-left{
+          display: inline-block;
+          border-radius: 2px;
+          border: solid 1px #67c5ff;
+          background-color:white;
+       
+        }
+        .login-menu-btn-right{
+          display: inline-block;
+          border-radius: 3px;
+          border: solid 2px yellowgreen;
+          margin-left: 15px;
+          background-color:yellowgreen;
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+  .top-page{
+    padding-top: 80px;
+    width: 100%;
+    height: 100%;
+    // opacity: 0.6;
+    // background-image: url("https://i.gyazo.com/3f1e14912525af6c96a930321f743876.jpg");
+    // background-size: cover;
+    background-color: white;
+    .main-user-name{
+      font-size: 15px;
+      font-weight: bold;
+      padding: 20px 0 0 50px;
+      display: inline-block;
+     
+
+    }
+    .main-photo{
+      height: 400px;
+      width: 500px;
+      padding: 30px;
+      border-radius: 3px;
+      margin: 0px auto;
+      background-color: rgb(253, 252, 252);
+      margin-top: 30px;
+      background-size:contain;  
+      background-repeat: no-repeat;  
+      background-position: center;
+      border: 4mm ridge rgba(48, 37, 37, 0.6);
+      // margin-bottom: 30px;
+      
+  
+    }
+    .container {
+      
+      box-shadow: 0 0 10px rgba(rgb(0, 0, 0),0.2);
+      background-color: white;
+      box-sizing: border-box;
+    }
+    .comments {
+      padding: 5px;
+      margin-top: 15px;
+      // a {
+      //   color: red;
+      //   &:hover {
+      //     text-decoration: underline;
+      //   }
+      // }
+    }
+  }  
+  .top-photos{
+    width: 100%;
+    background-color:rgb(232, 245, 48);
+    border-top: solid 2px rgb(106, 148, 240);
+    border-bottom: solid 2px rgb(106, 148, 240);
+    height: 70px;
+    margin-top: 30px;
+    
+    h2{
+      font-size: large;
+      font-weight: bold;
+    }
+    .top-photos-nav{
+      display: flex;
+      justify-content: space-around;
+      
+    }
+  }
+  .photos-holder{
+    width: 100%;
+    height: 100%;
+    
+    // background-image: url("https://i.gyazo.com/b7c5232bb2da6e50513a565dc0e30aa9.jpg");
+    // background-size: contain;
+    z-index: 0.9;
+    .photo-holder{
+      // display: flex;
+      display: grid;
+      grid-template-columns: 33% 33% 33%;
+      // padding: 0;
+    
+      .images{
+        // display: grid;
+        // grid-template-columns: repeat(3, 1fr);
+        // display: inline-block;
+        position: relative;
+        background-color: white;
+        // border: solid 1px; 
+        padding:  10px;   
+        width: 90%;
+        // height: 300px;
+        margin: 0 auto;
+        margin-top: 40px;
+        bottom: 20px;
+      
+       
+        &-holder{
+          // width: 100%;
+          height: 250px;
+          border: thick double #32a1ce;
+          background-color: rgb(243, 241, 241);
+          background-size:contain;  
+          background-repeat: no-repeat;  
+          background-position: center;
+
+          // justify-content: space-evenly 
+        }
+        &-title{
+          color: coral;
+          font-size: 22px;
+          font-weight: bold;
+          text-align: center;
+
+        }
+        &-name{
+          color: black;
+          font-size: 13px;
+          text-align: right;
+          position: absolute;
+          bottom: 3px;
+          right: 50px;
+
+        }
+            
+
+      }
+    }
+  }
+}

@@ -1,20 +1,11 @@
 .wrapper
   .header
     = render partial: 'header-top'
-    .header-bottom
-      %ul.menu
-        %li 
-          = link_to "投稿する", '/tweets/new'
-      %input.search{name: "search", placeholder: "キーワードを入力", type: "search"}/
-      %button.search-btn{title: '検索', type: 'submit'}
-      %ul.login-menu
-        %li.login-menu-btn-left
-          = link_to "ログイン"
-        %li.login-menu-btn-right 
-          = link_to "新規登録"
+    = render partial: 'header-bottom'
   .top-page
-    .main-photo
-      最新写真
+    -@random.each do |tweet|
+      .main-photo{style: "background-image: url(#{tweet.image});"}
+        
 
   .top-photos
     %h2 PHOTOS
@@ -29,11 +20,19 @@
   .photos-holder
     %ul.photo-holder
       - @tweets.each do |tweet|
-        %li.image
-          .image-holder{style: "background-image: url(#{tweet.image});"}
+        %li.images
+          .images-holder{style: "background-image: url(#{tweet.image});"}
           -# = tweet.image
           %p.image-title
             = tweet.text  
           %p.image-name
-            = tweet.name
-        
+            %a{href: "/users/#{tweet.user.id}"}
+              投稿者
+              = tweet.user.nickname
+            -# = tweet.name
+          = link_to "詳細","/tweets/#{tweet.id}", method: :get, class: "image-delete"
+          - if user_signed_in? && current_user.id == tweet.user_id
+            = link_to "削除","/tweets/#{tweet.id}", method: :delete, class: "image-delete"
+            = link_to "編集","/tweets/#{tweet.id}/edit", method: :get, class: "image-delete"
+  = paginate(@tweets)
+      
