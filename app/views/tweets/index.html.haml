@@ -3,6 +3,10 @@
     = render partial: 'header-top'
     = render partial: 'header-bottom'
   .top-page
+    .menu
+      = form_tag(tweets_searches_path,method: 'get') do
+        = text_field_tag :search
+        = submit_tag 'Search', name: nil
     -@random.each do |tweet|
       .main-photo{style: "background-image: url(#{tweet.image});"}
         

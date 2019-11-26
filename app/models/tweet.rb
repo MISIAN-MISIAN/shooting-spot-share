@@ -10,4 +10,13 @@ class Tweet < ApplicationRecord
   #   return Tweet.all unless search
   #   Tweet.where('text LIKE(?)', "%#{search}%")
   # end
+  # 同じ意味下記、検索機能
+
+  def self.search(search)
+    if search
+      Tweet.where('text LIKE(?)', "%#{search}%")
+    else
+      Tweet.all
+    end
+  end
 end
