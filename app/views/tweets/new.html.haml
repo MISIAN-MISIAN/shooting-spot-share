@@ -1,7 +1,7 @@
 .wrapper
   .header
     = render partial: 'header-top'
-
+    = render partial: 'header-bottom'
   .form
     = form_for @tweet do |f|
       = f.text_field :text, class: 'form__message', placeholder: 'タイトル'

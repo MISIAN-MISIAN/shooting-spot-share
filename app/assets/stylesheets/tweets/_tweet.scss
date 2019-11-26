@@ -135,26 +135,59 @@
       background-size:contain;  
       background-repeat: no-repeat;  
       background-position: center;
-      border: 4mm ridge rgba(48, 37, 37, 0.6);
+      border: 4mm ridge rgba(83, 83, 83, 0.6);
+      box-shadow: 0px 0px 20px rgba(rgb(12, 3, 32),0.9);
       // margin-bottom: 30px;
       
   
     }
     .container {
-      
+      width: 943.214px;
+      margin: 60px 240.891px;
       box-shadow: 0 0 10px rgba(rgb(0, 0, 0),0.2);
       background-color: white;
       box-sizing: border-box;
+      .form__message{
+        width: 400px;
+        margin-top: 10px;
+        margin-left: 280px;
+      }
+      .form__submit{
+        width: 300px;
+        margin-top: 10px;
+        margin-left: 330px;
+        position: relative;
+        display: inline-block;
+        font-weight: bold;
+        padding: 7px 10px 10px 10px;
+        text-decoration: none;
+        color: #FFF;
+        background: #a180dc;
+        transition: .4s;
+      }
+      .form__submit:hover{
+        background: #91b5fb;
+      }
+
     }
     .comments {
       padding: 5px;
       margin-top: 15px;
-      // a {
-      //   color: red;
-      //   &:hover {
-      //     text-decoration: underline;
-      //   }
-      // }
+      h4{
+        text-align: center;
+        border-bottom: dotted 2px rgb(0, 81, 255);
+      }
+      p{
+        margin-top: 10px;
+        padding-left: 90px;
+      }
+      a {
+        text-decoration: none;
+        color: rgb(124, 211, 226);
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }  
   .top-photos{
@@ -206,8 +239,9 @@
         &-holder{
           // width: 100%;
           height: 250px;
-          border: thick double #32a1ce;
-          background-color: rgb(243, 241, 241);
+          // border: thick double #32a1ce;
+          box-shadow: 0px 0px 20px rgba(rgb(0, 0, 0),0.3);
+          background-color: rgb(255, 255, 255);
           background-size:contain;  
           background-repeat: no-repeat;  
           background-position: center;
