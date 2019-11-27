@@ -1,0 +1,24 @@
+.container
+  - if current_user
+    -# - @comment = Comment.new unless @comment
+    = form_for [@tweet,@comment] , id: "new_comment" do |f|
+      = f.text_field :text, class: 'form__message', placeholder: 'コメント'
+      .form__mask
+      = f.submit 'Send', class: 'form__submit'
+
+  - else
+    %strong
+      %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+
+  .comments
+    %h4 ＜コメント一覧＞
+    - if @comments
+      - @comments.each do |comment|
+        %p
+          %strong
+            = link_to comment.user.nickname, "/users/#{comment.user_id}"
+            ：
+          = comment.text
+          - if user_signed_in? && current_user.id == comment.user_id
+            = link_to "削除","/comments/#{comment.id}", method: :delete, class: "comment-delete"
+            

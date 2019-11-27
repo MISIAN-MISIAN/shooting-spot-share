@@ -1,0 +1,4 @@
+.menu
+  = form_tag(tweets_searches_path,method: 'get') do
+    = text_field_tag :keyword, "",placeholder: "  キーワード  [例: 桜]", class: "search-box"
+    = submit_tag 'Search', name: nil, class: "search-submit"

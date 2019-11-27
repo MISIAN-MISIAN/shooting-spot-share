@@ -3,10 +3,7 @@
     = render partial: 'header-top'
     = render partial: 'header-bottom'
   .top-page
-    .menu
-      = form_tag(tweets_searches_path,method: 'get') do
-        = text_field_tag :search
-        = submit_tag 'Search', name: nil
+    = render partial: 'search'
     -@random.each do |tweet|
       .main-photo{style: "background-image: url(#{tweet.image});"}
         
@@ -28,10 +25,10 @@
           .images-holder{style: "background-image: url(#{tweet.image});"}
           -# = tweet.image
           %p.image-title
-            = tweet.text  
+            = tweet.text
           %p.image-name
             %a{href: "/users/#{tweet.user.id}"}
-              投稿者
+              投稿者:
               = tweet.user.nickname
             -# = tweet.name
           = link_to "詳細","/tweets/#{tweet.id}", method: :get, class: "image-delete"
