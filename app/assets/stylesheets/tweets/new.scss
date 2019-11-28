@@ -8,6 +8,12 @@
   box-shadow: 0 0 10px rgba(rgb(0, 0, 0),0.2);
   margin-top: 150px;
   margin-left: 350px;
+  @media screen and (max-width:480px){
+    margin-top: 150px;
+    margin-left: 20px;
+    width: 400px;
+    
+  }
   
   &__message {
     
@@ -15,12 +21,25 @@
     height: 35px;
     margin-left: 150px;
     text-align: center;
+    @media screen and (max-width:480px){
+      margin-left: 50px;
+      
+      width: 300px;
+    }
   }
   &__mask {
     width: 400px;
     background-color: yellow;
     margin-left: 150px;
     margin-top: 15px;
+    @media screen and (max-width:480px){
+      background-color: rgb(223, 235, 160);
+      display: inline-block;
+      margin-left: 50px;
+      width: 300px;
+  
+    }
+    
   }
   //   &__image {
   //     font-size: 20px;
@@ -38,14 +57,6 @@
     margin-top: 15px;
     font-size: 16px;
     height: 90px;
-
-    // display: block;
-    // border-radius: 4px;
-    // text-align: center;
-    // text-decoration: none;
-    // color: #fff;
-    // border:1px solid #8BC34A;
-    // background: rgb(112, 233, 227);
     display: inline-block;
     position: relative;
     padding: 0.5em 1.4em;
@@ -54,7 +65,10 @@
     color: #FFF;
     border-bottom: solid 5px #094c79;/*ボタン色より暗めに*/
     border-right: solid 5px #1b6f85;/*ボタン色より暗めに*/
-      
+    @media screen and (max-width:480px){
+      margin-left: 50px;
+      width: 300px;
+    }
   }
   &__submit:before{
     content: " ";
