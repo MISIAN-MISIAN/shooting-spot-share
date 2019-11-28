@@ -4,10 +4,22 @@
   box-shadow: 0 0 10px rgba(rgb(0, 0, 0),0.2);
   background-color: white;
   box-sizing: border-box;
+  @media screen and (max-width:480px){
+    width: 400px;
+    margin: 60px 20px 20px 50px;
+
+  }
   .form__message{
     width: 400px;
     margin-top: 10px;
     margin-left: 280px;
+    @media screen and (max-width:480px){
+      width: 300px;
+      margin-left: 50px;
+      border: solid 2px black;
+      
+  
+    }
   }
   .form__submit{
     width: 300px;
@@ -21,6 +33,13 @@
     color: #FFF;
     background: #a180dc;
     transition: .4s;
+    @media screen and (max-width:480px){
+      margin-left: 50px;
+      width: 300px;
+
+      
+  
+    }
   }
   .form__submit:hover{
     background: #91b5fb;
