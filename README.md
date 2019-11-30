@@ -9,7 +9,7 @@
 ### Association
 - has_many :tweets
 - has_many :comments
-- has_many :likes
+<!-- - has_many :likes -->
 
 
 
@@ -23,7 +23,8 @@
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
-- has_many :likes
+- has_many :comments
+<!-- - has_many :likes -->
 
 
 
@@ -40,7 +41,7 @@
 - belongs_to :tweet
 
 
-
+<!-- 
 ## likesテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -48,7 +49,7 @@
 |tweet_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
-- belongs_to :tweet
+- belongs_to :tweet -->
 
 
 
