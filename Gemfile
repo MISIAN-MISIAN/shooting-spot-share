@@ -59,3 +59,8 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'devise'
 gem 'kaminari'
+
+
+group :production do
+  gem 'unicorn', '5.4.1'
+end
