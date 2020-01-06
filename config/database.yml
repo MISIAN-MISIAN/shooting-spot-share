@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: shooting-spot-share_production
-  username: shooting-spot-share
-  password: <%= ENV['SHOOTING-SPOT-SHARE_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
