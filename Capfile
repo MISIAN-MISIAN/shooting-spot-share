@@ -1,4 +1,6 @@
 
+require "capistrano/scm/git"
+install_plugin Capistrano::SCM::Git
 #追記した記述
 require "capistrano/setup"
 require "capistrano/deploy"
