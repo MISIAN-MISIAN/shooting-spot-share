@@ -60,6 +60,8 @@ gem 'mini_magick'
 gem 'devise'
 gem 'kaminari'
 
+gem 'fog-aws'
+
 #デプロイ関係
 group :production do
   gem 'unicorn', '5.4.1'
