@@ -62,6 +62,9 @@ gem 'kaminari'
 
 gem 'fog-aws'
 
+gem "gmaps4rails"
+gem "geocoder"
+
 #デプロイ関係
 group :production do
   gem 'unicorn', '5.4.1'

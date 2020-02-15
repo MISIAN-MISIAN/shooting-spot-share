@@ -5,6 +5,7 @@
   .form
     = form_for @tweet do |f|
       = f.text_field :text, class: 'form__message', placeholder: 'タイトル'
+      -# = f.text_field :address, class: 'form__message', placeholder: '撮影場所住所(任意)'
       -# = f.text_field :name, class: 'form__name', placeholder: 'ニックネーム'
       .form__mask
         = f.label :image, class: 'form__mask__image' do
